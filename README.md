@@ -103,4 +103,17 @@ From the Azure Portal, restart Client-1.
 Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart).
 Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.
 
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/6854b984-65ca-4673-94cf-7301ec70068d)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/d49c7447-5d1e-473a-b63f-77638a92c305)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/7b9dd9ca-a505-4959-8a13-492dd02ebb2e)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/d0cf9da4-6aba-4710-8854-60ffccbd9b93)
+
+Log into Client-1 as mydomain.com\jane_admin and open system properties.
+Click “Remote Desktop”
+Allow “domain users” access to remote desktop, in the remote desktop settings. 
+You can now log into Client-1 as a normal, non-administrative user now. Check this by going to active directory users and computers and open folder "domain users".
+
 
