@@ -116,4 +116,7 @@ Click “Remote Desktop”
 Allow “domain users” access to remote desktop, in the remote desktop settings. 
 You can now log into Client-1 as a normal, non-administrative user now. Check this by going to active directory users and computers and open folder "domain users".
 
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/261540d7-5c7a-460d-9f80-de9ecec69f9f)
+
+Create users in Active directory. Play around with locking/unlocking accounts, resetting passwords etc. to gain familiarity. Have FUN! 
 
