@@ -39,7 +39,7 @@ First enter the official Microsoft Azure website and create your subscrption and
 
 </p>
 <p>
-Allow Azure to auto create a resource group. Name your virtual machine, select desired region, and change "Image" to "Windows 10". Once completed create your username and passsword followed by confirming your "Licensing" by checking the respective box. 
+Allow Azure to auto create a resource group. Name your virtual machine "DC-1", select desired region, and change "Image" to "Windows 10". Once completed create your username and passsword followed by confirming your "Licensing" by checking the respective box. 
 
 </p>
 <br />
@@ -49,20 +49,24 @@ Allow Azure to auto create a resource group. Name your virtual machine, select d
 
 </p>
 <p>
-Next select the "Networking" tab and confirm that the "Virtual network, subnet, and Public IP" will all be created by default. Once completed select "Review and create" to create your virtual machine. Create a second virtual machine and name it "DC-1"(this machine will be the directory), and make sure to place in the same region, resource group, and virtual network.
+Next select the "Networking" tab and confirm that the "Virtual network, subnet, and Public IP" will all be created by default. Once completed select "Review and create" to create your virtual machine. Create a second virtual machine and name it "Client-1"(this machine will be the directory), and make sure to place in the same region, resource group, and virtual network.
 
 
 ![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/92856c2b-4ae7-4dea-b864-b329a233af52)
 
-Copy the public IP address of DC-1 and use remote desktop to connect to the virtual machine.
+Copy the public IP address of Client-1 virtual machine and use remote desktop to connect to the virtual machine. Do the same for virtual machine DC-1.
 <p>
 
 ![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/851cf49e-ac14-4d70-af16-ffb49efd43b6)
 
-In the virtual machine, go to "Windows defender firewall" and select "Inbound rules". Enable rule on both "core networking diagnostics ICMPv4.
+In DC-1, go to "Windows defender firewall" and select "Inbound rules". Enable rule on both "core networking diagnostics ICMPv4.
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/989dd8f9-bb7a-4f79-9976-a9f93f8c309f)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/df66815f-40d9-4385-b928-7e2ce49115e9)
 
 
-
+In DC-1 go into server manager-> roles and features and install Active directory Domain services. Promote server to domain controller. Finish install.
 
 
 
