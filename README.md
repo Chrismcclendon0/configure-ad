@@ -50,7 +50,7 @@ Allow Azure to auto create a resource group. Name your virtual machine "DC-1", s
 </p>
 <p>
 Next select the "Networking" tab and confirm that the "Virtual network, subnet, and Public IP" will all be created by default. Once completed select "Review and create" to create your virtual machine. Create a second virtual machine and name it "Client-1"(this machine will be the directory), and make sure to place in the same region, resource group, and virtual network.
-Go into DC-1 virtual machine settings and change IP address to static. 
+Go into DC-1 virtual machine settings and change NIC private IP address to static. 
 
 
 ![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/92856c2b-4ae7-4dea-b864-b329a233af52)
@@ -75,4 +75,20 @@ In DC-1 go into server manager-> roles and features and install Active directory
 
 Add a new forest and create domain name (mydomain.com) and password. Remote desktop will need to be reconnected. Enter new credentials (mydomain.com/labuser).
 
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/b0118852-7d8a-4171-8fdf-facc565287f4)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/fd9a203a-0e3b-4b76-9396-cd8d7df092eb)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/c09dc8c2-c833-4738-a887-66a63bcf6f3c)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/b2258ce1-334e-4852-bf4a-90c8c4fc8478)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/0a99d913-5dc6-44a6-8e7c-4ae4d96a8ab9)
+
+In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
+Create a new OU named “_ADMINS”
+Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”
+Add jane_admin to the “Domain Admins” Security Group
+Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
+User jane_admin as your admin account from now on
 
