@@ -90,5 +90,17 @@ Create a new OU named “_ADMINS”
 Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”
 Add jane_admin to the “Domain Admins” Security Group
 Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
-User jane_admin as your admin account from now on
+User jane_admin as your admin account from now on.
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/b2672b28-f44d-4cfc-b3fb-56549d7600bc)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/0815e3c2-f09b-4ee6-93e0-0d6f5b6edb6a)
+
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/5040775d-d9a2-4511-80f1-98ff5d1eef04)
+
+From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
+From the Azure Portal, restart Client-1.
+Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart).
+Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.
+
 
