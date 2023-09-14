@@ -49,7 +49,8 @@ Allow Azure to auto create a resource group. Name your virtual machine, select d
 
 </p>
 <p>
-Next select the "Networking" tab and confirm that the "Virtual network, subnet, and Public IP" will all be created by default. Once completed select "Review and create" to create your virtual machine.
+Next select the "Networking" tab and confirm that the "Virtual network, subnet, and Public IP" will all be created by default. Once completed select "Review and create" to create your virtual machine. Create a second virtual machine and name it "DC-1"(this machine will be the directory), and make sure to place in the same region, resource group, and virtual network.
+
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
