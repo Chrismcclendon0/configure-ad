@@ -50,6 +50,7 @@ Allow Azure to auto create a resource group. Name your virtual machine "DC-1", s
 </p>
 <p>
 Next select the "Networking" tab and confirm that the "Virtual network, subnet, and Public IP" will all be created by default. Once completed select "Review and create" to create your virtual machine. Create a second virtual machine and name it "Client-1"(this machine will be the directory), and make sure to place in the same region, resource group, and virtual network.
+Go into DC-1 virtual machine settings and change IP address to static. 
 
 
 ![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/92856c2b-4ae7-4dea-b864-b329a233af52)
@@ -66,9 +67,12 @@ In DC-1, go to "Windows defender firewall" and select "Inbound rules". Enable ru
 ![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/df66815f-40d9-4385-b928-7e2ce49115e9)
 
 
-In DC-1 go into server manager-> roles and features and install Active directory Domain services. Promote server to domain controller. Finish install.
+In DC-1 go into server manager-> roles and features and install Active directory Domain services. Promote server to domain controller. 
 
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/340f37ed-738a-4895-8a4b-722b0e5a26e9)
 
+![image](https://github.com/Chrismcclendon0/configure-ad/assets/144953146/5cc70131-f93d-402e-93ef-17cdebaa3be5)
 
+Add a new forest and create domain name (mydomain.com) and password. Remote desktop will need to be reconnected. Enter new credentials (mydomain.com/labuser).
 
 
